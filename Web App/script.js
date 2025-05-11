@@ -1,6 +1,42 @@
     let currentDay = null;
 
     const attendanceData = {
+      'May 3': [
+        { name: 'Adiarte', status: 'Present' },
+        { name: 'Abayan', status: 'Late' },
+        { name: 'Fabros', status: 'Absent' },
+        { name: 'Caridad', status: 'Late' },
+        { name: 'Eja', status: 'Present' },
+        { name: 'Escaraman', status: 'Present' },
+        { name: 'Amis', status: 'Absent' },
+        { name: 'Joreen', status: 'Absent' },
+        { name: 'Ruben', status: 'Absent' },
+        { name: 'Afliccion', status: 'Present' }
+      ],
+      'May 4': [
+        { name: 'Adiarte', status: 'Present' },
+        { name: 'Abayan', status: 'Late' },
+        { name: 'Fabros', status: 'Absent' },
+        { name: 'Caridad', status: 'Late' },
+        { name: 'Eja', status: 'Present' },
+        { name: 'Escaraman', status: 'Present' },
+        { name: 'Amis', status: 'Absent' },
+        { name: 'Joreen', status: 'Absent' },
+        { name: 'Ruben', status: 'Absent' },
+        { name: 'Afliccion', status: 'Present' }
+      ],
+      'May 5': [
+        { name: 'Adiarte', status: 'Present' },
+        { name: 'Abayan', status: 'Late' },
+        { name: 'Fabros', status: 'Absent' },
+        { name: 'Caridad', status: 'Late' },
+        { name: 'Eja', status: 'Present' },
+        { name: 'Escaraman', status: 'Present' },
+        { name: 'Amis', status: 'Absent' },
+        { name: 'Joreen', status: 'Absent' },
+        { name: 'Ruben', status: 'Absent' },
+        { name: 'Afliccion', status: 'Present' }
+      ],
       'May 6': [
         { name: 'Adiarte', status: 'Present' },
         { name: 'Abayan', status: 'Late' },
