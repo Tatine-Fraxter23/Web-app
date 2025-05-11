@@ -2,36 +2,64 @@
 
     const attendanceData = {
       'May 6': [
-        { name: 'Justine', status: 'Present' },
-        { name: 'Cleo', status: 'Late' },
-        { name: 'Josh', status: 'Absent' },
-        { name: 'Louise', status: 'Late' },
-        { name: 'Eja', status: 'Absent' },
-        { name: 'Escaraman', status: 'Absent' },
+        { name: 'Adiarte', status: 'Present' },
+        { name: 'Abayan', status: 'Late' },
+        { name: 'Fabros', status: 'Absent' },
+        { name: 'Caridad', status: 'Late' },
+        { name: 'Eja', status: 'Present' },
+        { name: 'Escaraman', status: 'Present' },
         { name: 'Amis', status: 'Absent' },
         { name: 'Joreen', status: 'Absent' },
         { name: 'Ruben', status: 'Absent' },
-        { name: 'Afliccion', status: 'Absent' }
+        { name: 'Afliccion', status: 'Present' }
       ],
       'May 7': [
-        { name: 'Justine', status: 'Absent' },
-        { name: 'David', status: 'Present' },
-        { name: 'Eve', status: 'Present' }
+        { name: 'Adiarte', status: 'Present' },
+        { name: 'Abayan', status: 'Late' },
+        { name: 'Fabros', status: 'Present' },
+        { name: 'Caridad', status: 'Late' },
+        { name: 'Eja', status: 'Present' },
+        { name: 'Escaraman', status: 'Present' },
+        { name: 'Amis', status: 'Present' },
+        { name: 'Joreen', status: 'Present' },
+        { name: 'Ruben', status: 'Present' },
+        { name: 'Afliccion', status: 'Present' }
       ],
       'May 8': [
-        { name: 'Frank', status: 'Late' },
-        { name: 'Grace', status: 'Present' },
-        { name: 'Cleo', status: 'Absent' }
+        { name: 'Adiarte', status: 'Late' },
+        { name: 'Abayan', status: 'Present' },
+        { name: 'Fabros', status: 'Present' },
+        { name: 'Caridad', status: 'Present' },
+        { name: 'Eja', status: 'Present' },
+        { name: 'Escaraman', status: 'Late' },
+        { name: 'Amis', status: 'Present' },
+        { name: 'Joreen', status: 'Absent' },
+        { name: 'Ruben', status: 'Present' },
+        { name: 'Afliccion', status: 'Present' }
       ],
       'May 9': [
-        { name: 'Justine', status: 'Present' },
-        { name: 'Josh', status: 'Late' },
-        { name: 'Eve', status: 'Present' }
+        { name: 'Adiarte', status: 'Present' },
+        { name: 'Abayan', status: 'Present' },
+        { name: 'Fabros', status: 'Absent' },
+        { name: 'Caridad', status: 'Present' },
+        { name: 'Eja', status: 'Present' },
+        { name: 'Escaraman', status: 'Present' },
+        { name: 'Amis', status: 'Present' },
+        { name: 'Joreen', status: 'Present' },
+        { name: 'Ruben', status: 'Present' },
+        { name: 'Afliccion', status: 'Present' }
       ],
       'May 10': [
-        { name: 'Cleo', status: 'Present' },
-        { name: 'David', status: 'Absent' },
-        { name: 'Grace', status: 'Late' }
+        { name: 'Adiarte', status: 'Present' },
+        { name: 'Abayan', status: 'Late' },
+        { name: 'Fabros', status: 'Present' },
+        { name: 'Caridad', status: 'Late' },
+        { name: 'Eja', status: 'Present' },
+        { name: 'Escaraman', status: 'Present' },
+        { name: 'Amis', status: 'Absent' },
+        { name: 'Joreen', status: 'Present' },
+        { name: 'Ruben', status: 'Present' },
+        { name: 'Afliccion', status: 'Absent' }
       ]
     };
 
@@ -48,7 +76,7 @@
         datasets: [{
           label: 'Present Count',
           data: values,
-          backgroundColor: '#6366f1'
+          backgroundColor: '#344154'
         }]
       },
       options: {
@@ -85,7 +113,7 @@
         scales: {
           y: {
             beginAtZero: true,
-            suggestedMax: 30
+            suggestedMax: 20
           }
         }
       }
