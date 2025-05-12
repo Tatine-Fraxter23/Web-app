@@ -1,8 +1,9 @@
-        body {
+body {
             font-family: Arial, sans-serif;
             margin: 30px;
             background-color: #f9fbff;
         }
+
 
         h2 {
             margin-bottom: 10px;
@@ -36,39 +37,34 @@
             border-radius: 5px;
         }
 
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-            max-width: 500px;
-        }
-
-        #studentList {
-            margin-top: 20px;
-            padding: 10px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-            display: none;
-        }
-
-        #studentList h4 {
-            margin-top: 0;
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         ul {
-            padding-left: 20px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
 
-        li.present {
-            color: green;
+        li {
+            margin-bottom: 15px;
         }
 
-        li.absent {
-            color: red;
+        a.section-link {
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            transition: all 0.2s ease-in-out;
+            font-size: 20px;
+            font-weight: bold;
         }
 
-        li.late {
-            color: orange;
+        a.section-link:hover {
+            background-color: #f9f9f9;
+            border-color: #d0d0d0;
         }
