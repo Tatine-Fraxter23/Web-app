@@ -77,26 +77,27 @@ a.section-link:hover {
 
 .name-list li {
     margin-bottom: 10px;
+    width: 100%;
 }
 
 .name-list li a {
     display: inline-block;
-    /* Make the entire link area clickable */
     text-decoration: none;
     font-size: 25px;
     color: black;
-    /* Or any color you prefer for links */
     cursor: pointer;
     padding: 5px;
-    /* Add some padding around the text */
     border-radius: 5px;
-    /* Optional: round the corners of the border */
-    transition: border 0.3s;
-    /* Smooth transition for the border */
+    transition: all 0.3s;
+    width: inherit;
 }
 
 .name-list li a:hover {
-    border: 4px solid black;
-    background-color: lightgray;
+    background-color: rgb(222, 237, 255);
     /* Add a light gray border on hover */
+}
+.name-con {
+    display: flex;
+    width: max-content;
+    padding: 3px;
 }
