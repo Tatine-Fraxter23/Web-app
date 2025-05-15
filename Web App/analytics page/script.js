@@ -121,6 +121,7 @@
 
     const ctx = document.getElementById('dailyAttendanceChart').getContext('2d');
     const chart = new Chart(ctx, {
+      color: 'white',
       type: 'bar',
       data: {
         labels: dates,
@@ -128,7 +129,7 @@
           {
             label: 'Present',
             data: presentCounts,
-            backgroundColor: '#4caf50' // green
+            backgroundColor: '#4caf50', // green
           },
           {
             label: 'Absent',
@@ -172,12 +173,22 @@
                 return `${context.dataset.label}: ${context.raw}`;
               }
             }
-          }
+          },
+          legend: {
+            labels: {
+              color: 'white'
+            }
+        },
         },
         scales: {
           y: {
             beginAtZero: true,
-            suggestedMax: 20
+            suggestedMax: 20,
+          },
+          x: {
+            ticks: {
+              color: 'white'
+            }
           }
         }
       }
@@ -188,6 +199,8 @@
         alert('Please select a date from the chart first.');
         return;
       }
+
+      const myColor = "white";
 
       const rows = [['Date', 'Student Name', 'Status']];
       attendanceData[currentDay].forEach(({ name, status }) => {
@@ -204,3 +217,4 @@
       link.click();
       document.body.removeChild(link);
     }
+    
