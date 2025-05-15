@@ -75,7 +75,7 @@
             border-radius: 12px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
             max-width: 800px; 
-            max-width: 100%;        
+            width: 90%;        
             margin: 0 auto;    
         }
 

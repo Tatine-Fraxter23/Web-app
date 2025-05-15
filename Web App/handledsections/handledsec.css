@@ -12,6 +12,7 @@ h2 {
 }
 
 .nav-button {
+    display: flex;
   transition: all .3s ease-in-out;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
@@ -26,6 +27,7 @@ h2 {
   color: rgb(240, 240, 255);
   padding: 1.5cqh 2.5cqw;
   margin: auto;
+  
 }
 
 .nav-button:hover {
@@ -120,9 +122,11 @@ a.section-link:hover {
     text-decoration: none;
     font-size: 25px;
     color: black;
+    background-color: white;
     cursor: pointer;
     padding: 5px;
     border-radius: 5px;
+    border: 2px solid black;
     transition: all 0.3s;
     width: inherit;
 }
