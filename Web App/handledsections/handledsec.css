@@ -1,14 +1,47 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 30px;
-    background-color: #f9fbff;
+  background-image: linear-gradient(rgb(42, 45, 55), rgb(145, 145, 255));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  padding: 20px;
+  margin: 0;
 }
-
 
 h2 {
     margin-bottom: 10px;
 }
 
+.nav-button {
+  transition: all .3s ease-in-out;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: black;
+  border-radius: 40px;
+  border: transparent;
+  text-align: center;
+  text-wrap: nowrap;
+  cursor: pointer;
+  color: rgb(240, 240, 255);
+  padding: 1.5cqh 2.5cqw;
+  margin: auto;
+}
+
+.nav-button:hover {
+  background-color: rgb(200, 200, 255);
+  color: black;
+  border-radius: 40px;
+}
+.nav-button:active {
+  background-color: rgb(239, 239, 255);
+  color: black;
+}
+
+.nav-button:focus {
+  background-color: rgb(182, 183, 217);
+  color: black;
+}
 nav {
     display: flex;
     gap: 20px;
@@ -29,7 +62,9 @@ nav a.active {
     background: rgb(219, 234, 254);
     font-weight: bold;
 }
-
+a {
+    background-color: black;
+}
 a:hover {
     background-color: rgb(222, 237, 255);
     transform: translate(0px);
@@ -38,7 +73,7 @@ a:hover {
 }
 
 .container {
-    max-width: 600px;
+    width: max-content;
     margin: 0 auto;
 }
 

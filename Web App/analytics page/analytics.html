@@ -13,21 +13,20 @@
 <body>
 
     <h2>Attendance Report</h2>
-    <nav>
-        <a href="../main page/index.html">Back</a>
-        <a class="active">Overview</a>
+    <nav class = "navibar">
+        <a class="nav-button" href="/main page/index.html">Back</a>
     </nav>
 
     <div class="card">
-        <h3>Class Attendance (Daily)</h3>
+        <h3><center>Class Attendance (Daily)</center></h3>
         <canvas id="dailyAttendanceChart" height="300"></canvas>
 
         <div id="studentList">
             <h4>Student Attendance on <span id="selectedDate"></span>:</h4>
             <ul id="studentNames"></ul>
         </div>
-        <button onclick="downloadCSV()"
-            style="margin-top: 20px; padding: 10px 20px; background: #2563eb; color: white; border: none; border-radius: 6px; cursor: pointer;">
+        <button onclick="downloadCSV()"~
+            style="margin-top: 20px; padding: 10px 20px; background: rgb(200, 200, 255); color: rgb(0, 0, 0); border: none; border-radius: 6px; cursor: pointer;">
             Download Attendance Report (CSV)
         </button>
 

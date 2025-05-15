@@ -1,9 +1,9 @@
     let currentDay = null;
 
     const attendanceData = {
-      'May 3': [
-        { name: 'Adiarte', status: 'Present' },
+      'May 3 2025': [
         { name: 'Abayan', status: 'Late' },
+        { name: 'Adiarte', status: 'Present' },
         { name: 'Fabros', status: 'Absent' },
         { name: 'Caridad', status: 'Late' },
         { name: 'Eja', status: 'Present' },
@@ -13,9 +13,9 @@
         { name: 'Ruben', status: 'Absent' },
         { name: 'Afliccion', status: 'Present' }
       ],
-      'May 4': [
-        { name: 'Adiarte', status: 'Present' },
+      'May 4 2025': [
         { name: 'Abayan', status: 'Late' },
+        { name: 'Adiarte', status: 'Present' },
         { name: 'Fabros', status: 'Absent' },
         { name: 'Caridad', status: 'Late' },
         { name: 'Eja', status: 'Present' },
@@ -25,9 +25,9 @@
         { name: 'Ruben', status: 'Absent' },
         { name: 'Afliccion', status: 'Present' }
       ],
-      'May 5': [
-        { name: 'Adiarte', status: 'Present' },
+      'May 5 2025': [
         { name: 'Abayan', status: 'Late' },
+        { name: 'Adiarte', status: 'Present' },
         { name: 'Fabros', status: 'Absent' },
         { name: 'Caridad', status: 'Late' },
         { name: 'Eja', status: 'Present' },
@@ -37,9 +37,9 @@
         { name: 'Ruben', status: 'Absent' },
         { name: 'Afliccion', status: 'Present' }
       ],
-      'May 6': [
-        { name: 'Adiarte', status: 'Present' },
+      'May 6 2025': [
         { name: 'Abayan', status: 'Late' },
+        { name: 'Adiarte', status: 'Present' },
         { name: 'Fabros', status: 'Absent' },
         { name: 'Caridad', status: 'Late' },
         { name: 'Eja', status: 'Present' },
@@ -49,9 +49,9 @@
         { name: 'Ruben', status: 'Absent' },
         { name: 'Afliccion', status: 'Present' }
       ],
-      'May 7': [
-        { name: 'Adiarte', status: 'Present' },
+      'May 7 2025': [
         { name: 'Abayan', status: 'Late' },
+        { name: 'Adiarte', status: 'Late' },
         { name: 'Fabros', status: 'Present' },
         { name: 'Caridad', status: 'Late' },
         { name: 'Eja', status: 'Present' },
@@ -61,9 +61,9 @@
         { name: 'Ruben', status: 'Present' },
         { name: 'Afliccion', status: 'Present' }
       ],
-      'May 8': [
-        { name: 'Adiarte', status: 'Late' },
+      'May 8 2025': [
         { name: 'Abayan', status: 'Present' },
+        { name: 'Adiarte', status: 'Late' },
         { name: 'Fabros', status: 'Present' },
         { name: 'Caridad', status: 'Present' },
         { name: 'Eja', status: 'Present' },
@@ -73,9 +73,9 @@
         { name: 'Ruben', status: 'Present' },
         { name: 'Afliccion', status: 'Present' }
       ],
-      'May 9': [
-        { name: 'Adiarte', status: 'Present' },
+      'May 9 2025': [
         { name: 'Abayan', status: 'Present' },
+        { name: 'Adiarte', status: 'Present' },
         { name: 'Fabros', status: 'Absent' },
         { name: 'Caridad', status: 'Present' },
         { name: 'Eja', status: 'Present' },
@@ -85,9 +85,9 @@
         { name: 'Ruben', status: 'Present' },
         { name: 'Afliccion', status: 'Present' }
       ],
-      'May 10': [
-        { name: 'Adiarte', status: 'Present' },
+      'May 10 2025': [
         { name: 'Abayan', status: 'Late' },
+        { name: 'Adiarte', status: 'Present' },
         { name: 'Fabros', status: 'Present' },
         { name: 'Caridad', status: 'Late' },
         { name: 'Eja', status: 'Present' },
@@ -99,22 +99,50 @@
       ]
     };
 
+    const presentCounts = [];
+    const absentCounts = [];
+    const lateCounts = [];
     const dates = Object.keys(attendanceData);
-    const values = dates.map(date =>
-      attendanceData[date].filter(s => s.status !== 'Absent').length
-    );
+
+    dates.forEach(date => {
+      const entries = attendanceData[date];
+
+      let present = 0, absent = 0, late = 0;
+      entries.forEach(({ status }) => {
+        if (status === 'Present') present++;
+        else if (status === 'Absent') absent++;
+        else if (status === 'Late') late++;
+      });
+
+      presentCounts.push(present);
+      absentCounts.push(absent);
+      lateCounts.push(late);
+    });
 
     const ctx = document.getElementById('dailyAttendanceChart').getContext('2d');
     const chart = new Chart(ctx, {
       type: 'bar',
       data: {
         labels: dates,
-        datasets: [{
-          label: 'Present Count',
-          data: values,
-          backgroundColor: '#344154'
-        }]
+        datasets: [
+          {
+            label: 'Present',
+            data: presentCounts,
+            backgroundColor: '#4caf50' // green
+          },
+          {
+            label: 'Absent',
+            data: absentCounts,
+            backgroundColor: '#f44336' // red
+          },
+          {
+            label: 'Late',
+            data: lateCounts,
+            backgroundColor: '#ff9800' // orange
+          }
+        ]
       },
+
       options: {
         onClick: (e, elements) => {
           if (elements.length > 0) {
@@ -141,7 +169,7 @@
           tooltip: {
             callbacks: {
               label: function (context) {
-                return `Present Count: ${context.raw}`;
+                return `${context.dataset.label}: ${context.raw}`;
               }
             }
           }
