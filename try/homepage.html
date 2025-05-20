@@ -6,6 +6,36 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>hello</h1>
+    <button type="button" id="signoutbutton">sign out</button>
+    <h2 id="msg"></h2>
+    <h2 id="greet"></h2>
+    <script>
+        let UserCred = JSON.parse(sessionStorage.getItem("user-creds"));
+        let UserInfo = JSON.parse(sessionStorage.getItem("user-info"));
+
+        let MsgHead = document.getElementById('msg');
+        let GreetHead = document.getElementById('greet');
+        let Signoutbtn = document.getElementById('signoutbutton');
+        
+        let Signout = () =>{
+            sessionStorage.removeItem("user-creds");
+            sessionStorage.removeItem("user-info");
+            window.location.href = 'SignIn.html'
+        }
+
+        let CheckCred = () => {
+            if (!sessionStorage.getItem("user-creds"))
+                window.location.href = 'SignIn.html'
+
+            else {
+                MsgHead.innerText = `user with email "${UserCred.email}" logged in`;
+                GreetHead.innerText = `welcome ${UserInfo.Name}!`;
+            }
+        }
+        
+        window.addEventListener('load', CheckCred);
+        Signoutbtn.addEventListener('click', Signout);
+    </script>
 </body>
 </html>
