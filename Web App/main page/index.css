@@ -2,7 +2,10 @@
 margin: 0;
 padding: 0;
 }
-
+.dark-mode{
+  --pc:white;
+  --sc:black;
+}
 ::-webkit-scrollbar {
   display: none;
 }
