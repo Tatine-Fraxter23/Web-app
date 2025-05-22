@@ -4,35 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Attendance Report</title>
-    <link rel="icon" type="image/png" href="\logo\logo.png">
     <link rel="stylesheet" href ="analytics.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-   
+    <link rel="icon" href="../logo/logo.png">
 </head>
 
 <body>
-
+    
     <nav class = "navibar">
         <button class="nav-button" onclick="document.location='../main page/index.html'">Back</button>
     </nav>
     <center><h2>Attendance Report</h2></center>
-
+    
     <div class="card">
         <h3><center>Class Attendance (Daily)</center></h3>
         <canvas id="dailyAttendanceChart"></canvas>
-
+        
         <div id="studentList">
             <h4>Student Attendance on <span id="selectedDate"></span>:</h4>
             <ul id="studentNames"></ul>
         </div>
         <button onclick="downloadCSV()"~
-            style="margin-top: 20px; padding: 10px 20px; background: rgb(200, 200, 255); color: rgb(0, 0, 0); border: none; border-radius: 6px; cursor: pointer;">
-            Download Attendance Report (CSV)
-        </button>
-
-    </div>
-
+        style="margin-top: 20px; padding: 10px 20px; background: rgb(200, 200, 255); color: rgb(0, 0, 0); border: none; border-radius: 6px; cursor: pointer;">
+        Download Attendance Report (CSV)
+    </button>
     
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="script.js"></script>
 </body>
 
