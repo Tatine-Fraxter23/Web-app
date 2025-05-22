@@ -3,24 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="icon" href="../Web App/logo/logo.png">
+    <link rel="stylesheet" href="try.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Login Page | Web App</title>
   </head>
   <body>
     <form id="mainform">
+
+      <h2 class="form-header">Log In</h2>
+      <br><br>
       <div>
-        <input type="email" id="emailinp" placeholder="name@example.com" />
         <label for="input">Email Address</label>
+        <img src="" alt="" class="logo">
+        <input type="email" id="emailinp" autocomplete="off" placeholder="Type your email address"/>
       </div>
+      <br><br>
       <div>
-        <input type="password" id="passwordinp" placeholder="password"/>
         <label for="input">Password</label>
+        <input type="password" id="passwordinp" autocomplete="off" placeholder="Type your password"/>
       </div>
+      <br><br>
+      <br><br>
+
+      <!-- 
+      Why is there a full name option in a login-page?
       <div>
         <input type="text" id="fullnameinp" placeholder="your fullname"/>
-        <label for="input">FullName</label>
+        <label for="input"></label>
+      </div> -->
+
+      <div class="button-con">
+        <button onclick="location.href='homepage.html'" type="submit">sign in</button>
+        <p>Or</p>
+        <button type="submit" id="signUp">sign up</button>
       </div>
-      <button type="submit">sign up</button>
-      <a href="homepage.html"><button type="submit">sign in</button></a>
+
     </form>
     <script type="module" src="firebase-config.js"></script>
   </body>
