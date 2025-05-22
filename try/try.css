@@ -74,6 +74,7 @@ form {
     background-color: rgb(88, 146, 197);
 }
 
+
 input:focus {
     outline: none;
 }
@@ -86,6 +87,12 @@ input[type=email] {
 
 input[type=password] {
     background-image: url(lock.svg);
+    background-repeat: no-repeat;
+    background-position: 5px 10px;
+}
+
+input[type=text] {
+    background-image: url(name.svg);
     background-repeat: no-repeat;
     background-position: 5px 10px;
 }
