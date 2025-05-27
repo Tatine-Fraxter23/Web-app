@@ -15,9 +15,7 @@ h2 {
     color: white;
     text-decoration: underline;
 }
-h3{
-    color: white;
-}
+
 .navibar {
     background-color: black;
     justify-content: center;
@@ -44,7 +42,7 @@ h3{
     color: rgb(240, 240, 255);
     padding: 1.5cqh 1.5cqw;
 }
-    
+
 .nav-button:hover {
   background-color: rgb(200, 200, 255);
   color: black;
@@ -93,49 +91,47 @@ h3{
     margin: 0 auto;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.settings {
+    background: black;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    max-width: 1000px; 
+    max-width: 100%;        
+    margin: 0 auto;
 }
 
-li {
-    margin-bottom: 15px;
-}
-.name-list {
-    list-style: none;
-    padding: 0;
-    margin-left: 30px;
-}
-
-.name-list li {
-    margin-bottom: 10px;
-    width: 100%;
-}
-
-.name-list li a {
-    display: inline-block;
-    text-decoration: none;
-    font-size: 25px;
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
-    cursor: pointer;
-    padding: 8px;
-    border-radius: 40px;
-    transition: all 0.3s;
-    width: inherit;
-}
-
-.name-list li a:hover {
-    background-color: rgb(222, 237, 255);
-}
-.name-con {
+.btns {
     display: flex;
-    width: max-content;
-    padding: 3px;
+    flex-direction: column;
+    max-width: 15%;
+    gap: 10px;
+}
+.btns .sttngsbtn {
+    height: 50px; /* make them taller */
+    font-size: 16px; /* optional: increase font size */
+    border-radius: 6px;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    font-size: 25px;
+    transition: transform 0.3s ease;
 }
 
-#section-title {
-  text-decoration: none;
-  border-bottom: none;
+/* Shrink slightly on hover */
+.btns .sttngsbtn:hover {
+  transform: scale(0.96);
 }
+
+/* Bounce on click */
+.btns .sttngsbtn:active {
+  animation: bounce .7s;
+}
+
+/* Bounce keyframes */
+@keyframes bounce {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+

@@ -58,3 +58,70 @@ body {
   background-color: rgb(182, 183, 217);
   color: black;
 }
+
+.dropdown {
+  border-radius: inherit;
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #2c2c2c;
+  padding: 10px;
+  min-width: 200px;
+  display: flex;
+  border-radius: 6px;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  flex-direction: column;
+  z-index: 99;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown:hover .dropdown-toggle {
+  background-color: rgb(200, 200, 255);
+  color: black;
+}
+
+
+.dropdown-menu a {
+  color: black;
+  text-decoration: none;
+  padding: 0;
+  border-radius: 4px;
+}
+
+.dropdown-name,
+.dropdown-email {
+  color: white;
+  margin: 5px 10px;
+  font-size: 14px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #444;
+  margin: 10px 0;
+}
+
+.sttngsbtn {
+  width: 80%;       /* or any width you want */
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
