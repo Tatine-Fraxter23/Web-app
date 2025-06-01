@@ -1,26 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../logo/logo.png">
-    <link rel="stylesheet" href="handledsec.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../logo/logo.png" />
+    <link rel="stylesheet" href="handledsec.css" />
     <title>LFCA333N006</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <nav class="navibar">
-        <button class="nav-button" onclick= "document.location='handlesec.html'">Back</button>
+      <button class="nav-button" onclick="document.location='handlesec.html'">
+        Back
+      </button>
     </nav>
 
     <h2 id="section-title"></h2>
-    <h3>Names:</h3>
+    <div id="current-day-date"></div>
     <h4 id="section-schedule">Schedule: Loading...</h4>
 
-    <div class="name-con">
+    <div class="content-container">
+      <!-- Left: graph placeholder -->
+      <div class="graph-container">
+        <h3>Attendance Graph</h3>
+        <canvas id="attendance-graph" width="400" height="200"></canvas>
+      </div>
+
+      <!-- Right: student list -->
+      <div class="name-con">
+        <h3>Students</h3>
         <ul id="students"></ul>
+      </div>
+    </div>
+
+    <div id="scanned-in-students-container">
+      <h3>Students Who Scanned In Today</h3>
+      <ul id="scanned-in-students-list"></ul>
+      <div class="csvbtn">
+        <button id="download-csv-btn">Download CSV</button>
+        <label for="attendance-date">Select Date:</label>
+        <input type="date" id="attendance-date" />
+      </div>
     </div>
 
     <script type="module" src="StudentList.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  </body>
 </html>

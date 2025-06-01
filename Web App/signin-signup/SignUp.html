@@ -3,26 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="authentication.css" />
+    <title>Sign Up</title>
   </head>
   <body>
+    <div id="page-transition"></div>
+
     <form id="mainform">
-      <h2>Sign Up</h2>
+      <h2>Create Your Account ✨</h2>
+
       <div>
-        <input type="email" id="emailinp" placeholder="name@example.com" />
-        <label for="input">Email Address</label>
+        <label for="fullnameinp">Full Name</label>
+        <input
+          type="text"
+          id="fullnameinp"
+          placeholder="Your full name"
+          required
+        />
       </div>
+
       <div>
-        <input type="password" id="passwordinp" placeholder="password"/>
-        <label for="input">Password</label>
+        <label for="emailinp">Email Address</label>
+        <input
+          type="email"
+          id="emailinp"
+          placeholder="name@example.com"
+          required
+        />
       </div>
+
       <div>
-        <input type="text" id="fullnameinp" placeholder="your fullname"/>
-        <label for="input">FullName</label>
+        <label for="passwordinp">Password</label>
+        <input
+          type="password"
+          id="passwordinp"
+          placeholder="Create a password"
+          required
+        />
       </div>
-      <button type="submit">sign up</button>
-      <a href="SignIn.html"><button type="button">sign in</button></a>
+
+      <button type="submit">Sign Up</button>
+
+      <p>Already have an account? <a href="SignIn.html">Sign in here</a></p>
     </form>
+
     <script type="module" src="SignUpconfig.js"></script>
+    <script>
+      const pageTransition = document.getElementById("page-transition");
+
+      window.addEventListener("load", () => {
+        // Fade out on page load
+        setTimeout(() => {
+          pageTransition.classList.add("hidden");
+        }, 100); // slight delay to ensure visibility
+      });
+
+      // Optional: Fade in on page leave
+      const links = document.querySelectorAll("a[href]");
+      links.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const href = link.getAttribute("href");
+          pageTransition.classList.remove("hidden");
+          setTimeout(() => {
+            window.location.href = href;
+          }, 500); // match this with CSS transition
+        });
+      });
+    </script>
   </body>
 </html>

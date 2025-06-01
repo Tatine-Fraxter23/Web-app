@@ -10,41 +10,42 @@ body {
   margin: 0;
 }
 
+
 h2 {
-    margin-top: 15px;
-    color: white;
-    text-decoration: underline;
+  margin-top: 15px;
+  color: white;
+  text-decoration: underline;
 }
-h3{
-    color: white;
+h3 {
+  color: white;
 }
 .navibar {
-    background-color: black;
-    justify-content: center;
-    width: max-content;
-    display: flex;
-    margin-bottom: 10px;
-    padding: 1cqh 1cqw;
-    border-radius: 40px;
-    gap: 3%;
+  background-color: black;
+  justify-content: center;
+  width: max-content;
+  display: flex;
+  margin-bottom: 10px;
+  padding: 1cqh 1cqw;
+  border-radius: 40px;
+  gap: 3%;
 }
 
 .nav-button {
-    display: flex;
-    transition: all .3s ease-in-out;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    font-weight: bold;
-    background-color: transparent;
-    border-radius: 40px;
-    border: transparent;
-    text-align: center;
-    text-wrap: nowrap;
-    cursor: pointer;
-    color: rgb(240, 240, 255);
-    padding: 1.5cqh 1.5cqw;
+  display: flex;
+  transition: all 0.3s ease-in-out;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: transparent;
+  border-radius: 40px;
+  border: transparent;
+  text-align: center;
+  text-wrap: nowrap;
+  cursor: pointer;
+  color: rgb(240, 240, 255);
+  padding: 1.5cqh 1.5cqw;
 }
-    
+
 .nav-button:hover {
   background-color: rgb(200, 200, 255);
   color: black;
@@ -59,21 +60,35 @@ h3{
   background-color: rgb(182, 183, 217);
   color: black;
 }
+
+.section-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
 .button {
-    display: flex;
-    transition: all .3s ease-in-out;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 20px;
-    background-color: black;
-    border-radius: 40px;
-    border: transparent;
-    text-align: center;
-    text-wrap: nowrap;
-    cursor: pointer;
-    color: rgb(240, 240, 255);
-    padding: 1.5cqh 2.5cqw;
+  display: flex;
+  transition: all 0.3s ease-in-out;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 40px; /* ⬆ increased from 20px */
+  background-color: black;
+  border-radius: 40px;
+  border: transparent;
+  text-align: center;
+  text-wrap: nowrap;
+  cursor: pointer;
+  color: rgb(240, 240, 255);
+  padding: 3cqh 5cqw; /* ⬆ more padding */
+  min-height: 50px;   /* optional for consistent height */
+  min-width: 160px;   /* optional for wider buttons */
+  align-items: center; /* ensure text is centered vertically */
+  justify-content: center; /* ensure text is centered horizontally */
 }
 .button:hover {
   background-color: rgb(200, 200, 255);
@@ -89,53 +104,236 @@ h3{
   color: black;
 }
 .container {
-    width: max-content;
-    margin: 0 auto;
+  width: max-content;
+  margin: 0 auto;
 }
 
 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 li {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 .name-list {
-    list-style: none;
-    padding: 0;
-    margin-left: 30px;
+  list-style: none;
+  padding: 0;
+  margin-left: 30px;
 }
 
 .name-list li {
-    margin-bottom: 10px;
-    width: 100%;
+  margin-bottom: 10px;
+  width: 100%;
 }
 
 .name-list li a {
-    display: inline-block;
-    text-decoration: none;
-    font-size: 25px;
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
-    cursor: pointer;
-    padding: 8px;
-    border-radius: 40px;
-    transition: all 0.3s;
-    width: inherit;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 40px;
+  transition: all 0.3s;
+  width: inherit;
 }
 
 .name-list li a:hover {
-    background-color: rgb(222, 237, 255);
+  background-color: rgb(222, 237, 255);
 }
 .name-con {
-    display: flex;
-    width: max-content;
-    padding: 3px;
+  display: flex;
+  width: max-content;
+  padding: 3px;
+  border-radius: 10px;
 }
 
 #section-title {
   text-decoration: none;
   border-bottom: none;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0 20px;
+}
+
+nav.navibar {
+  margin: 10px 0;
+}
+
+/* Container holding graph and list side by side */
+.content-container {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+/* Left panel: graph */
+.graph-container {
+  flex: 1;
+  min-width: 300px;
+  height: 300px; /* ✅ Set a fixed height */
+  border: 1px solid #ccc;
+  padding:100px;
+  background-color: rgba(255, 255, 255, 0.05); /* Optional: subtle background */
+  border-radius: 10px;
+}
+
+/* Right panel: student list */
+.name-con {
+  flex: 1;
+  min-width: 300px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+h2,
+h3,
+h4 {
+  margin: 5px 0;
+  padding-bottom: 20px;
+  font-size: 35px;
+  text-decoration: none;
+}
+
+/* Current day and date display */
+#current-day-date {
+  font-size: 18px;
+  font-weight: bold;
+  color: #e0e0ff;
+  margin-bottom: 10px;
+}
+
+/* Scanned-in students section */
+#scanned-in-students-container {
+  margin-top: 40px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* List inside the scanned-in section */
+#scanned-in-students-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+#scanned-in-students-list li {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 10px 16px;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+
+#scanned-in-students-list li:hover {
+  background-color: rgba(220, 220, 255, 0.8);
+  color: black;
+}
+
+/* Attendance Graph Canvas */
+#attendance-graph {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* List of student names (inside the Students section) */
+#students {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+#students li {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 10px 16px;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  font-size: 16px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#students li:hover {
+  background-color: rgba(220, 220, 255, 0.8);
+  color: black;
+  transform: translateX(5px);
+  cursor: pointer;
+}
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#students li {
+  animation: fadeInSlide 0.3s ease-in-out;
+}
+
+.csvbtn {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 35%;
+  margin: 20px auto;
+}
+
+.csvbtn button {
+  padding: 10px 20px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.csvbtn button:hover {
+  background-color: white;
+  color: black;
+}
+
+.csvbtn label {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.csvbtn input[type="date"] {
+  padding: 10px 45px;
+  border-radius: 6px;
+  border: 3px solid #ccc;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  color: #333;
 }

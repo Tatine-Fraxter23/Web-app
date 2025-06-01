@@ -47,6 +47,8 @@ let SignInUser = (evt) => {
       const docSnap = await getDoc(ref);
 
       if (docSnap.exists) {
+
+        sessionStorage.setItem("professor-uid", credentials.user.uid);
         // Save user data to session storage
         sessionStorage.setItem(
           "user-info",
