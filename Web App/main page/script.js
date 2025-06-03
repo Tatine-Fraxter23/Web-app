@@ -76,7 +76,7 @@ let CheckCred = async () => {
 
             // Store in session and redirect to section page
             sessionStorage.setItem("selected-section", selectedSection);
-            window.location.href = "SectionPage.html";
+            window.location.href = "../handledsections/handledsec.html";
           });
         });
       } else {

@@ -55,7 +55,7 @@ async function fetchUserSections(uid) {
             const selectedSection = e.target.getAttribute("data-section");
             console.log("Clicked section:", selectedSection);
             sessionStorage.setItem("selected-section", selectedSection);
-            window.location.href = "StudentList.html";
+            window.location.href = "../signin-signup/SignIn.html";
           });
         });
       } else {
@@ -74,5 +74,5 @@ async function fetchUserSections(uid) {
 if (UserCred && UserCred.uid) {
   fetchUserSections(UserCred.uid);
 } else {
-  window.location.href = "../signin_signup/SignIn.html"; // redirect if not logged in
+  window.location.href = "../signin-signup/SignIn.html"; // redirect if not logged in
 }
