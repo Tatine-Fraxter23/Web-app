@@ -51,7 +51,7 @@ let Signout = () => {
 
 let CheckCred = async () => {
   if (!sessionStorage.getItem("user-creds")) {
-    window.location.href = "SignIn.html";
+    window.location.href = "../signin-signup/SignIn.html";
   } else {
     MsgHead.innerText = `${UserCred.email}`;
     GreetHead.innerText = `${UserInfo.Name}`;
@@ -107,7 +107,7 @@ DeleteBtn.addEventListener("click", async () => {
 
       // Clear session and redirect
       sessionStorage.clear();
-      window.location.href = "../signin-signup/SignIn.html";
+      window.location.href = ".../signin-signup/SignIn.html";
     } catch (error) {
       console.error("Error deleting account:", error);
       alert("Failed to delete account. You might need to re-authenticate.");
